@@ -3,9 +3,7 @@
         (empty? xs) ys
         (empty? ys) xs
         (<= (first xs) (first ys)) (cons (first xs) (ms-merge (rest xs) ys))
-        :else (cons (first ys) (ms-merge xs (rest ys)))
-    )
-)
+        :else (cons (first ys) (ms-merge xs (rest ys)))))
 
 (defn ms-chunk [xs]
     (cond
